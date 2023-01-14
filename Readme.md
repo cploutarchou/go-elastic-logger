@@ -1,19 +1,27 @@
-## Logger package
+## Go Elastic Logger
 
 ______
 
 ### How to use logger package
 
 #### 1. Download the package :
-
+######   For ElasticSearch 8
+```go
+    go get github.com/cploutarchou/go-elastic-logger/v8
+```
+######    For ElasticSearch 7
 ```go
     go get github.com/cploutarchou/go-elastic-logger/v7
 ```
 
 #### 2. Import the package :
-
+######    For ElasticSearch 8
 ```go
-    import github.com/cploutarchou/go-elastic-logger/v7
+    import github.com/cploutarchou/go-elastic-logger/v8
+```
+######    For ElasticSearch 7
+```go
+    import github.com/cploutarchou/go-elastic-logger/v8
 ```
 #### 3. Set the Elasticsearch client:
 ```go
@@ -102,7 +110,7 @@ func main() {
 	testFnc()
 }
 ```
-
+       
 ### Elastic Doc Example:
 ```json
 {
