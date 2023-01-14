@@ -1,10 +1,9 @@
-package v7
+package go_elastic_logger
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/elastic/go-elasticsearch/v7"
 	"io"
 	"os"
 	"runtime"
@@ -60,7 +59,7 @@ func log(level LogLevel, message string) {
 	case FATAL:
 		levelStr = "FATAL"
 	}
-
+	
 	pc, file, line, ok := runtime.Caller(2)
 	if !ok {
 		file = "???"
