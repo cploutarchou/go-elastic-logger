@@ -2,4 +2,6 @@ module github.com/cploutarchou/go-elastic-logger/v7
 
 go 1.18
 
-require github.com/elastic/go-elasticsearch/v7 v7.17.7
+require github.com/elastic/go-elasticsearch/v8 v8.6.0
+
+require github.com/elastic/elastic-transport-go/v8 v8.0.0-20211216131617-bbee439d559c // indirect
