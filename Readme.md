@@ -7,13 +7,13 @@ ______
 #### 1. Download the package :
 
 ```go
-    go get github.com/cploutarchou/go-elastic-logger/v7
+    go get github.com/cploutarchou/go-elastic-logger/v8
 ```
 
 #### 2. Import the package :
 
 ```go
-    import github.com/cploutarchou/go-elastic-logger/v7
+    import github.com/cploutarchou/go-elastic-logger/v8
 ```
 #### 3. Set the Elasticsearch client:
 ```go
@@ -66,7 +66,7 @@ ______
 package main
 
 import (
-	"github.com/elastic/go-elasticsearch/v7"
+	"github.com/elastic/go-elasticsearch/v8"
 )
 
 // setElasticClient sets the elasticsearch client to be used for logging.
