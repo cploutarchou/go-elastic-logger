@@ -1,17 +1,25 @@
-## Logger package
+## Go Elastic Logger
 
 ______
 
 ### How to use logger package
 
 #### 1. Download the package :
-
+######   For ElasticSearch 8
 ```go
     go get github.com/cploutarchou/go-elastic-logger/v8
 ```
+######    For ElasticSearch 7
+```go
+    go get github.com/cploutarchou/go-elastic-logger/v7
+```
 
 #### 2. Import the package :
-
+######    For ElasticSearch 8
+```go
+    import github.com/cploutarchou/go-elastic-logger/v8
+```
+######    For ElasticSearch 7
 ```go
     import github.com/cploutarchou/go-elastic-logger/v8
 ```
@@ -27,13 +35,13 @@ ______
     logger.SetElasticsearchClient(client)
 
 ```
-          
+
 #### 4. Set the index name:
-                            
+
 ```go
     logger.SetIndex("myindex")
 ```
-         
+
 #### 5. Set the log level
 ```go
     logger.SetLogLevel(logger.DEBUG)
@@ -59,14 +67,14 @@ ______
 * The package is concurrent safe and the elasticsearch client will be initiated only once.
 * If you want to change the timestamp format you can change the format by using the `SetTimeFormat()`function. Default layout is 2023-01-02 15:04:05
 * You can use the SetLogLevel function to filter the logs you want to see based on the log level.
-                      
 
-### Example: 
+
+### Example:
 ```go  
 package main
 
 import (
-	"github.com/elastic/go-elasticsearch/v8"
+	"github.com/elastic/go-elasticsearch/v7"
 )
 
 // setElasticClient sets the elasticsearch client to be used for logging.
