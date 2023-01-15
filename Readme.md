@@ -13,7 +13,7 @@ ______
 #### 2. Import the package :
 
 ```go
-    import logger "github.com/cploutarchou/go-elastic-logger/v7"
+    import "github.com/cploutarchou/go-elastic-logger/v7"
 ```
 #### 3. Set the Elasticsearch client:
 ```go
@@ -24,33 +24,33 @@ ______
     if err != nil {
         panic(err)
     }
-    logger.SetElasticsearchClient(client)
+    SetElasticsearchClient(client)
 
 ```
           
 #### 4. Set the index name:
                             
 ```go
-    logger.SetIndex("myindex")
+    SetIndex("myindex")
 ```
          
 #### 5. Set the log level
 ```go
-    logger.SetLogLevel(logger.DEBUG)
+    SetLogLevel(DEBUG)
 ```
 
 #### 6. Use the log level function
 ```go
-    logger.Debug("Debug message")
-    logger.Debugf("Debug message with format: %s", "hello")
-    logger.Info("Info message")
-    logger.Infof("Info message with format: %d", 123)
-    logger.Warning("Warning message")
-    logger.Warningf("Warning message with format: %f", 3.14)
-    logger.Error("Error message")
-    logger.Errorf("Error message with format: %t", true)
-    logger.Fatal("Fatal message")
-    logger.Fatalf("Fatal message with format: %v", "goodbye")
+    Debug("Debug message")
+    Debugf("Debug message with format: %s", "hello")
+    Info("Info message")
+    Infof("Info message with format: %d", 123)
+    Warning("Warning message")
+    Warningf("Warning message with format: %f", 3.14)
+    Error("Error message")
+    Errorf("Error message with format: %t", true)
+    Fatal("Fatal message")
+    Fatalf("Fatal message with format: %v", "goodbye")
 ```
 
 
@@ -82,19 +82,19 @@ func setElasticClient() {
 		panic(err)
 	}
 	//sets the client as the Elasticsearch client to be used.
-	logger.SetElasticsearchClient(client)
+	SetElasticsearchClient(client)
 
 }
 
 func testFnc() {
 	// sets the index name to be used for logging.
-	logger.SetIndex("logs")
+	SetIndex("logs")
 	//sets the log level to debug.
-	logger.SetLogLevel(logger.DEBUG)
+	SetLogLevel(DEBUG)
 	//sets the format of the timestamp in the logs.
-	logger.SetTimeFormat("2006-01-02 15:04:05")
+	SetTimeFormat("2006-01-02 15:04:05")
 	//logs a debug message.
-	logger.Debug("This is a debug message")
+	Debug("This is a debug message")
 	return
 }
 func main() {
