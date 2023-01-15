@@ -74,8 +74,8 @@ ______
 package main
 
 import (
-	logger "github.com/cploutarchou/go-elastic-logger/v7"
-	"github.com/elastic/go-elasticsearch/v7"
+	logger "github.com/cploutarchou/go-elastic-logger/v8"
+	"github.com/elastic/go-elasticsearch/v8"
 )
 
 // setElasticClient sets the elasticsearch client to be used for logging.
