@@ -1,4 +1,4 @@
-package go_elastic_logger
+package logger
 
 import (
 	"context"
