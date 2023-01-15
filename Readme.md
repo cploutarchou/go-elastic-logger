@@ -13,7 +13,7 @@ ______
 #### 2. Import the package :
 
 ```go
-    import github.com/cploutarchou/go-elastic-logger/v8
+    import logger "github.com/cploutarchou/go-elastic-logger/v8"
 ```
 #### 3. Set the Elasticsearch client:
 ```go
@@ -66,6 +66,7 @@ ______
 package main
 
 import (
+	logger "github.com/cploutarchou/go-elastic-logger/v8"
 	"github.com/elastic/go-elasticsearch/v8"
 )
 
@@ -81,19 +82,19 @@ func setElasticClient() {
 		panic(err)
 	}
 	//sets the client as the Elasticsearch client to be used.
-	SetElasticsearchClient(client)
+	logger.SetElasticsearchClient(client)
 
 }
 
 func testFnc() {
 	// sets the index name to be used for logging.
-	SetIndex("logs")
+	logger.SetIndex("logs")
 	//sets the log level to debug.
-	SetLogLevel(DEBUG)
+	logger.SetLogLevel(logger.DEBUG)
 	//sets the format of the timestamp in the logs.
-	SetTimeFormat("2006-01-02 15:04:05")
+	logger.SetTimeFormat("2006-01-02 15:04:05")
 	//logs a debug message.
-	Debug("This is a debug message")
+	logger.Debug("This is a debug message")
 	return
 }
 func main() {

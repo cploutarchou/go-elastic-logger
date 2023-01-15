@@ -1,4 +1,4 @@
-module github.com/cploutarchou/go-elastic-logger/v7
+module github.com/cploutarchou/go-elastic-logger/v8
 
 go 1.18
 
